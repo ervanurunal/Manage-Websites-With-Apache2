@@ -1,4 +1,4 @@
-## Manage Websites With Apache2 
+## Apache2 Web Server Configuration
 
 ---
 
@@ -35,6 +35,7 @@ This lab provided practical experience with:
 Linux Administration / Web Server Management / Networking
 
 ---
+---
 
 ### Apache Directory Structure
 
@@ -51,7 +52,7 @@ Apache manages websites using configuration files and symbolic links between ava
 ---
 ---
 
-## 1. Update Package Repository
+### 1. Update Package Repository
 
 Before installing software, update package information:
 
@@ -63,7 +64,7 @@ sudo apt update
 
 ---
 
-## 2. Install Apache2
+### 2. Install Apache2
 
 Install Apache2:
 
@@ -77,7 +78,7 @@ Apache automatically installs required dependencies.
 
 ---
 
-## 3. Check Apache Service
+### 3. Check Apache Service
 
 Verify Apache status:
 
@@ -97,7 +98,7 @@ sudo service apache2 start
 
 ---
 
-## 4. Verify Default Website
+### 4. Verify Default Website
 
 Open the server IP address in a browser.
 
@@ -105,7 +106,7 @@ Apache displays its default webpage, confirming the web server is functioning co
 
 ---
 
-## 5. Review Available Sites
+### 5. Review Available Sites
 
 View existing site configurations:
 
@@ -124,7 +125,7 @@ default-ssl.conf
 
 ---
 
-## 6. Move Website Files
+### 6. Move Website Files
 
 Move company website files:
 
@@ -142,7 +143,7 @@ ls -l /var/www
 
 ---
 
-## 7. Create a New Virtual Host
+### 7. Create a New Virtual Host
 
 Edit:
 
@@ -166,7 +167,7 @@ DocumentRoot /var/www/ourcompany
 
 ---
 
-## 8. Enable the New Site
+### 8. Enable the New Site
 
 Enable:
 
@@ -188,7 +189,7 @@ Apache uses symbolic links to manage active websites.
 
 ---
 
-## 9. Reload Apache Configuration
+### 9. Reload Apache Configuration
 
 Apply changes:
 
@@ -202,7 +203,7 @@ The company website should now appear.
 
 ---
 
-## 10. Enable Server Side Includes (SSI)
+### 10. Enable Server Side Includes (SSI)
 
 The website uses SSI to display a footer. SSI requires the Apache **include** module.
 
@@ -224,7 +225,7 @@ sudo service apache2 restart
 
 ---
 
-## 11. Configure SSI in Virtual Host
+### 11. Configure SSI in Virtual Host
 
 Edit configuration:
 
@@ -248,7 +249,7 @@ This allows Apache to process Server Side Includes.
 
 ---
 
-## 12. Reload Apache Again
+### 12. Reload Apache Again
 
 Apply configuration:
 
@@ -261,7 +262,7 @@ The footer now appears correctly.
 ---
 ---
 
-## Cybersecurity Relevance
+### Cybersecurity Relevance
 
 Web servers are common targets for attackers. Understanding Apache configuration helps with:
 
@@ -277,7 +278,7 @@ Apache logs can also assist SOC analysts during incident investigations.
 ---
 ---
 
-## Linux Commands Used
+### Linux Commands Used
 
 | Command       | Purpose                           |
 | ------------- | --------------------------------- |
@@ -298,7 +299,7 @@ Apache logs can also assist SOC analysts during incident investigations.
 ---
 ---
 
-## Key Concepts
+### Key Concepts
 
 | Concept            | Description                     |
 | ------------------ | ------------------------------- |
@@ -314,7 +315,7 @@ Apache logs can also assist SOC analysts during incident investigations.
 ---
 ---
 
-## Important Commands
+### Important Commands
 
 ```bash
 sudo apt update
@@ -334,7 +335,7 @@ sudo service apache2 restart
 ---
 ---
 
-## Skills Demonstrated
+### Skills Demonstrated
 
 * Linux Administration
 * Apache Web Server Management
@@ -349,6 +350,6 @@ sudo service apache2 restart
 ---
 ---
 
-## Final Takeaway
+### Final Takeaway
 
 This lab provided hands-on experience deploying and configuring an Apache2 web server. I practiced installing Apache, creating virtual hosts, enabling and disabling websites, activating modules, configuring Server Side Includes, and managing Linux services. These are foundational skills for IT Support, System Administration, and Cybersecurity roles.
